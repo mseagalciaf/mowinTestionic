@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Heroes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-row>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Heroe</ion-card-subtitle>
+        <ion-card-title>{{heroe.name}}</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <img class="image" [src]="heroe.image" alt="angular logo" />
+        <p class="description">{{ heroe.description }}</p>
+        <h4>
+          Publicado: <span class="text-info" style="color: darkcyan;">{{ heroe.published }}</span>
+        </h4>
+        <h4>
+          Autor: <span class="text-info" style="color: darkcyan;">{{ heroe.autor }}</span>
+        </h4>
+        <h4>
+          País: <span class="text-info" style="color: darkcyan;">{{ heroe.country }}</span>
+        </h4>
+        <ion-button color="success" (click)="goToBack()">regresar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+
+</ion-content>

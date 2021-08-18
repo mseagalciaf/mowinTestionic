@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrusel de Heroes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let heroe of heroes" (click)="viewMore(heroe.id)">
+      <img class="img-fluid" [src]="heroe.image" alt="angular logo" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>
